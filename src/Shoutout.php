@@ -89,7 +89,7 @@ class Shoutout{
 	        "content" => ["sms" => $content],
 	        "transports" => ["SMS"]
         ];
-        $this->apiCall($request_body);
+        return $this->apiCall($request_body);
     }
 
     public function sendEmail($destinations, $subject, $content)
@@ -100,7 +100,7 @@ class Shoutout{
 	        "content" => ["email" => ["htmlType"=>true, "subject"=>$subject, "body"=>$content]],
 	        "transports" => ["email"]
         ];
-        $this->apiCall($request_body);
+        return $this->apiCall($request_body);
     }
 
     /**
