@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Dasun4u\\LaravelShoutoutMessaging\\": "src"
+      "Dasun4u\\LaravelShoutoutMessaging\\": "src/"
     }
   },
   "extra": {
