@@ -22,7 +22,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Dasun4u\\ShoutoutServiceProvider"
+        "Dasun4u\\LaravelShoutoutMessaging\\ShoutoutServiceProvider"
       ]
     }
   }
