@@ -29,7 +29,7 @@ php artisan vendor:publish --provider="Dasun4u\LaravelShoutoutMessaging\Shoutout
 use Dasun4u\LaravelShoutoutMessaging\Shoutout;
 
 $shoutout = new Shoutout();
-$destinations = ["+94764429394"]; // Multiple numbers can add as array
+$destinations = ["+94712345678"]; // Multiple numbers can add as array
 $content = "Test SMS";
 $response = $shoutout->sendSMS($destinations, $content);
 ```
