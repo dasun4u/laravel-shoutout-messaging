@@ -1,3 +1,8 @@
+[![Latest Stable Version](https://poser.pugx.org/dasun4u/laravel-shoutout-messaging/v/stable)](https://packagist.org/packages/dasun4u/laravel-shoutout-messaging)
+[![Total Downloads](https://poser.pugx.org/dasun4u/laravel-shoutout-messaging/downloads)](https://packagist.org/packages/dasun4u/laravel-shoutout-messaging)
+[![License](https://poser.pugx.org/dasun4u/laravel-shoutout-messaging/license)](https://packagist.org/packages/dasun4u/laravel-shoutout-messaging)
+[![StyleCI](https://github.styleci.io/repos/240946426/shield?branch=master)](https://github.styleci.io/repos/240946426)
+
 # Laravel Shoutout Messaging
 Shoutout messaging library for Laravel
 * [Laravel](https://laravel.com) PHP framework
