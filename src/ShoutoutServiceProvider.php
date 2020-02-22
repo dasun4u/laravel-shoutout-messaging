@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Dasun Dissanayake
  * Date: 2020-02-17
- * Time: 12:50 AM
+ * Time: 12:50 AM.
  */
 
 namespace Dasun4u\LaravelShoutoutMessaging;

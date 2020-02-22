@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Dasun Dissanayake
  * Date: 2020-02-17
- * Time: 1:07 AM
+ * Time: 1:07 AM.
  */
 
 namespace Dasun4u\LaravelShoutoutMessaging;
@@ -12,8 +12,8 @@ use GuzzleHttp\Client;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 
-class Shoutout{
-
+class Shoutout
+{
     /**
      * @var string
      */
@@ -35,7 +35,7 @@ class Shoutout{
     protected $api_url;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $log_enable;
 
@@ -69,10 +69,10 @@ class Shoutout{
         $method = 'POST';
         $request = [
             'headers' => [
-                'Content-Type' => 'application/json',
-                'Authorization' => 'apikey '.$this->api_key
+                'Content-Type'  => 'application/json',
+                'Authorization' => 'apikey '.$this->api_key,
             ],
-            'json' => $request_body
+            'json' => $request_body,
         ];
         $client = new Client(['http_errors' => false]);
         $response = $client->request($method, $url, $request);
@@ -84,22 +84,24 @@ class Shoutout{
     public function sendSMS($destinations, $content)
     {
         $request_body = [
-            "source" => $this->sms_source,
-	        "destinations" => $destinations,
-	        "content" => ["sms" => $content],
-	        "transports" => ["SMS"]
+            'source'       => $this->sms_source,
+            'destinations' => $destinations,
+            'content'      => ['sms' => $content],
+            'transports'   => ['SMS'],
         ];
+
         return $this->apiCall($request_body);
     }
 
     public function sendEmail($destinations, $subject, $content)
     {
         $request_body = [
-            "source" => $this->email_source,
-	        "destinations" => $destinations,
-	        "content" => ["email" => ["htmlType"=>true, "subject"=>$subject, "body"=>$content]],
-	        "transports" => ["email"]
+            'source'       => $this->email_source,
+            'destinations' => $destinations,
+            'content'      => ['email' => ['htmlType'=>true, 'subject'=>$subject, 'body'=>$content]],
+            'transports'   => ['email'],
         ];
+
         return $this->apiCall($request_body);
     }
 
@@ -109,6 +111,7 @@ class Shoutout{
      * @param null $request_body
      * @param null $response
      * @param null $file_name
+     *
      * @throws \Exception
      */
     public function logService($url = null, $method = null, $request_body = null, $response = null, $file_name = null)
@@ -116,23 +119,21 @@ class Shoutout{
         try {
             if ($this->log_enable) {
                 $content = [
-                    "Request URL" => $url,
-                    "Request Method" => $method,
-                    "Request Body" => $request_body,
-                    "Status Code" => $response->getStatusCode(),
-                    "Response Headers" => $response->getHeaders(),
-                    "Response Body" => json_decode($response->getBody()) != null ? json_decode($response->getBody()) : $response->getBody()
+                    'Request URL'      => $url,
+                    'Request Method'   => $method,
+                    'Request Body'     => $request_body,
+                    'Status Code'      => $response->getStatusCode(),
+                    'Response Headers' => $response->getHeaders(),
+                    'Response Body'    => json_decode($response->getBody()) != null ? json_decode($response->getBody()) : $response->getBody(),
                 ];
 
-                $log = new Logger("Shoutout");
-                $file_name = $file_name != null ? $file_name : date("Y_m_d") . '.log';
-                $log->pushHandler(new StreamHandler($this->log_path . "/" . $file_name), Logger::INFO);
+                $log = new Logger('Shoutout');
+                $file_name = $file_name != null ? $file_name : date('Y_m_d').'.log';
+                $log->pushHandler(new StreamHandler($this->log_path.'/'.$file_name), Logger::INFO);
                 $log->info('SERVICE LOG', $content);
             }
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             report($e);
         }
     }
-
-
 }
