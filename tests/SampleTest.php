@@ -8,7 +8,7 @@
 
 namespace Dasun4u\LaravelShoutoutMessaging\Tests;
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ .'/../vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
 
