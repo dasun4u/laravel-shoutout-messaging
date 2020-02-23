@@ -8,7 +8,7 @@
 
 namespace Dasun4u\LaravelShoutoutMessaging\Tests;
 
-require __DIR__ . "/../vendor/autoload.php";
+require __DIR__ . '/../vendor/autoload.php';
 
 use PHPUnit\Framework\TestCase;
 
@@ -17,12 +17,12 @@ final class SampleTest extends TestCase
     public function testSMS()
     {
         // Testing need API token and more packages then ignore the testing
-        $this->assertEquals("SMS", "SMS");
+        $this->assertEquals('SMS', 'SMS');
     }
 
     public function testEmail()
     {
         // Testing need API token and more packages then ignore the testing
-        $this->assertEquals("Email", "Email");
+        $this->assertEquals('Email', 'Email');
     }
 }
