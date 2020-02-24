@@ -1,4 +1,4 @@
-![image2](https://user-images.githubusercontent.com/15827995/75132688-f11ac700-56fd-11ea-8d08-2d644e65ae49.jpg)
+![image3](https://user-images.githubusercontent.com/15827995/75132975-edd40b00-56fe-11ea-8811-7e6f3f13a450.jpg)
 
 # Laravel Shoutout Messaging
 Shoutout messaging library for Laravel
