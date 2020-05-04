@@ -24,7 +24,7 @@ composer require dasun4u/laravel-shoutout-messaging
 
 * Import config file by running this command in your terminal/cmd and change the configs accordingly
 ```
-php artisan vendor:publish --provider="Dasun4u\LaravelShoutoutMessaging\ShoutoutServiceProvider
+php artisan vendor:publish --provider="Dasun4u\LaravelShoutoutMessaging\ShoutoutServiceProvider"
 ```
 
 * Send SMS
