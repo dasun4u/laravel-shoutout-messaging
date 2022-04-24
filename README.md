@@ -14,7 +14,7 @@ Shoutout messaging library for Laravel
 ## Requirements
 
 * PHP 5.6+
-* Laravel 5.5+
+* Laravel 8.0+
 ## Installation
 
 * Install the package by running this command in your terminal/cmd:
