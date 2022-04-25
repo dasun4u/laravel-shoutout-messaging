@@ -1,6 +1,12 @@
 # Change Log
 
-## v2.0.1 - 2022-04-24
+## v2.0.3 - 2022-04-25
+
+### Fixed
+
+- PHP version compatibility
+
+## v2.0.2 - 2022-04-24
 
 ### Fixed
 
