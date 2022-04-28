@@ -27,6 +27,13 @@ composer require dasun4u/laravel-shoutout-messaging
 php artisan vendor:publish --provider="Dasun4u\LaravelShoutoutMessaging\ShoutoutServiceProvider"
 ```
 
+* Change the imported config file (`config/shoutout_message.php`) accordingly
+```php
+'api_key' => 'XXXXXXXXX.XXXXXXXXX.XXXXXXXXX',
+'sms_source' => 'ShoutDEMO',
+'email_source' => 'ShoutDEMO <shoutdemo@getshoutout.com>',
+```
+
 * Send SMS
 ```php
 use Dasun4u\LaravelShoutoutMessaging\Shoutout;
